@@ -6,7 +6,7 @@ const bgUrl =
 
 const Hero = () => {
   return (
-    <div id="home" className="relative  h-[80vh] w-full">
+    <div id="home" className="relative h-[80vh] w-full">
       <StickyImage />
       <HeroContents />
     </div>

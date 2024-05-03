@@ -7,16 +7,20 @@ import React, { useState } from "react";
 type NavLinkProps = {
   children: React.ReactNode;
   href: string;
+  label: string;
 };
 
-const NavLink = ({ children, href }: NavLinkProps) => {
+const NavLink = ({ children, href, label }: NavLinkProps) => {
   const scrolled = useMenuStore((state) => state.scrolled);
   const setOpen = useMenuStore((state) => state.setOpen);
+
   const [hover, setHover] = useState(false);
   return (
     <Link
       href={href}
-      onClick={() => setOpen(false)}
+      onClick={() => {
+        setOpen(false);
+      }}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       className="relative text-lg"

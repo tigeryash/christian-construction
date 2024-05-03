@@ -1,5 +1,5 @@
 "use client";
-import { links } from "@/lib/constants";
+import { links } from "@/lib/data";
 import { motion } from "framer-motion";
 import NavLink from "./nav-link";
 import { useMenuStore } from "@/stores/menu-store";
@@ -54,7 +54,9 @@ const NavMenu = () => {
           className="ml-auto pr-6"
           key={link.href}
         >
-          <NavLink href={link.href}>{link.label}</NavLink>
+          <NavLink href={link.href} label={link.label}>
+            {link.label}
+          </NavLink>
         </motion.li>
       ))}
     </motion.ul>

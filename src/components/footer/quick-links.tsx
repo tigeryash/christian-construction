@@ -1,4 +1,4 @@
-import { links } from "@/lib/constants";
+import { links } from "@/lib/data";
 import React from "react";
 import NavLink from "../header/nav-link";
 import H3 from "../H3";
@@ -10,7 +10,9 @@ const QuickLinks = () => {
       <ul className="space-y-4">
         {links.map((link, index) => (
           <li key={index}>
-            <NavLink href={link.href}>{link.label}</NavLink>
+            <NavLink href={link.href} label={link.label}>
+              {link.label}
+            </NavLink>
           </li>
         ))}
       </ul>

@@ -1,6 +1,6 @@
 "use client";
 
-import { links } from "@/lib/constants";
+import { links } from "@/lib/data";
 import NavLink from "./nav-link";
 import { motion } from "framer-motion";
 const NavList = () => {
@@ -13,7 +13,9 @@ const NavList = () => {
           transition={{ duration: 0.1, delay: idx * 0.1 }}
           key={link.href}
         >
-          <NavLink href={link.href}>{link.label}</NavLink>
+          <NavLink href={link.href} label={link.label}>
+            {link.label}
+          </NavLink>
         </motion.li>
       ))}
     </ul>
