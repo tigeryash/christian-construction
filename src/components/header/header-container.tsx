@@ -15,11 +15,11 @@ const HeaderContainer = ({ children }: { children: React.ReactNode }) => {
   return (
     <header
       className={`fixed flex top-0 z-50 w-full px-6 
-    transition-all duration-300 ease-out lg:px-32 md:px-16 justify-between
+    transition-all duration-300 ease-out lg:px-32 md:px-16 justify-between text-white
     ${
       scrolled
-        ? "bg-neutral-950 py-3 shadow-xl text-white"
-        : "bg-neutral-950/0 py-6 shadow-none"
+        ? "bg-neutral-950 py-3 shadow-xl "
+        : "bg-neutral-950/80  py-6 shadow-none"
     }`}
     >
       {children}

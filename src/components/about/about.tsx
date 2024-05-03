@@ -1,7 +1,8 @@
 import React from "react";
+import SectionContainer from "../section-container";
 
 const About = () => {
-  return <div>About</div>;
+  return <SectionContainer id="about">About</SectionContainer>;
 };
 
 export default About;

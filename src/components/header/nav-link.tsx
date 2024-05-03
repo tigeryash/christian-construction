@@ -19,7 +19,7 @@ const NavLink = ({ children, href }: NavLinkProps) => {
       onClick={() => setOpen(false)}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className="relative"
+      className="relative text-lg"
     >
       {children}
       <span
@@ -27,7 +27,7 @@ const NavLink = ({ children, href }: NavLinkProps) => {
           transform: hover ? "scaleX(1)" : "scaleX(0)",
         }}
         className={cn(
-          "absolute -bottom-2 -left-2 -right-2 h-1 origin-left scale-x-0 rounded-full bg-black transition-transform duration-300 ease-out",
+          "absolute -bottom-2 -left-2 -right-2 h-1 origin-left scale-x-0 rounded-full bg-white transition-transform duration-300 ease-out",
           {
             "bg-white": scrolled,
           }

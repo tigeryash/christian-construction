@@ -109,8 +109,8 @@ const ContactForm = () => {
             <FormItem>
               <FormControl>
                 <Textarea
-                  rows={6}
-                  className="resize-none text-base mb-8 md:mb-10 lg:mb-20"
+                  rows={7}
+                  className="resize-none text-base mb-8 md:mb-10 lg:mb-12"
                   placeholder="Description"
                   {...field}
                 />

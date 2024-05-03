@@ -9,20 +9,20 @@ const ContactInfo = () => {
     <div className="text-center md:text-left">
       <H3>Contact Info</H3>
 
-      <div className="space-y-9">
+      <div className="space-y-9 text-lg">
         <div className="flex items-center justify-center md:justify-normal">
-          <FaPhoneVolume />
+          <FaPhoneVolume className="w-4 h-4 md:w-5 md:h-5" />
 
           <span className="ml-2">+1 123 456 7890</span>
         </div>
 
         <div className="flex items-center justify-center md:justify-normal">
-          <MdMarkEmailUnread />
+          <MdMarkEmailUnread className="w-4 h-4 md:w-5 md:h-5" />
           <span className="ml-2 underline">Example@email.com </span>
         </div>
 
         <div className="flex items-center justify-center md:justify-normal">
-          <HiLocationMarker />
+          <HiLocationMarker className="w-4 h-4 md:w-5 md:h-5" />
           <span className="ml-2">1234 Street Name, City Name, State</span>
         </div>
       </div>
