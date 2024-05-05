@@ -26,6 +26,7 @@ const HeroContents = () => {
       <motion.p
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, delay: 0.3 }}
         className="mb-2 text-center md:mb-4 text-4xl font-bold md:text-7xl"
       >
         {`Christian's Contruction`}
@@ -33,6 +34,7 @@ const HeroContents = () => {
       <motion.p
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, delay: 0.4 }}
         className=" text-center text-xl  md:text-3xl "
       >
         Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -41,7 +43,7 @@ const HeroContents = () => {
         <motion.a
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
+          transition={{ duration: 0.4, delay: 0.7 }}
           href="#contact"
           className="px-8 py-3 text-lg font-bold text-black bg-white rounded-full hover:bg-black hover:text-white transition-all duration-300 ease-in-out"
         >
@@ -50,7 +52,7 @@ const HeroContents = () => {
         <motion.a
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
+          transition={{ duration: 0.4, delay: 0.7 }}
           href="#"
           className="px-8 py-3 text-lg text-center font-bold text-black bg-white/30 border hover:bg-white rounded-full transition-all duration-300 ease-in-out"
         >

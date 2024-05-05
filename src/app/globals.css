@@ -78,3 +78,7 @@
 .input {
   @apply px-4 py-6 text-base;
 }
+
+.content-grid {
+  @apply flex flex-col p-6 lg:p-2 xl:p-6 space-y-4;
+}

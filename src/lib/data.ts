@@ -40,3 +40,42 @@ export const links = [
   { href: "#gallery", label: "Gallery" },
   { href: "#contact", label: "Contact" },
 ] as const;
+
+export const testimonials = [
+  {
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
+    name: "Jane Dodson",
+    title: "Marketing Director, Nike",
+  },
+  {
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
+    name: "Johnathan Rodriguez",
+    title: "UX Research, Atlassian",
+  },
+  {
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
+    name: "Phil Heath",
+    title: "Staff Engineer, Dribbble",
+  },
+  {
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
+    name: "Andrea Beck",
+    title: "Marketing Manager, GrubHub",
+  },
+  {
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
+    name: "Daniel Henderson",
+    title: "Engineering Manager, Kaggle",
+  },
+  {
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita sequi cupiditate harum repellendus ipsum dignissimos? Officiis ipsam dolorum magnam assumenda.",
+    name: "Anderson Lima",
+    title: "Product Manager, Slack",
+  },
+];

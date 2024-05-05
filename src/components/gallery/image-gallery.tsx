@@ -1,8 +1,9 @@
 "use client";
 import { images } from "@/lib/data";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
-import { motion, useInView, useMotionValue } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { motion, useMotionValue } from "framer-motion";
+import { useIsInView } from "@/lib/hooks";
 
 const ONE_SECOND = 1000;
 const AUTO_DELAY = ONE_SECOND * 10;
@@ -17,11 +18,7 @@ const SPRING_OPTIONS = {
 
 const ImageGallery = () => {
   const [imgIndex, setImgIndex] = useState(0);
-  const ref = useRef(null);
-  const isInView = useInView(ref, {
-    margin: "-50% 0px -50% 0px",
-    once: true,
-  });
+  const { ref, isInView } = useIsInView();
 
   const dragX = useMotionValue(0);
 
@@ -52,7 +49,6 @@ const ImageGallery = () => {
     }
   };
 
-  console.log(isInView);
   return (
     <div
       ref={ref}
@@ -63,7 +59,7 @@ const ImageGallery = () => {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView && { opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.1 }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
           key={image.id}
         >
           <Image

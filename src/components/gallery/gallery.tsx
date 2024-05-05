@@ -7,7 +7,7 @@ const Gallery = () => {
   return (
     <SectionContainer
       id="gallery"
-      className=" bg-[#f9fafb] w-full flex flex-col items-center"
+      className=" bg-[#f9fafb] w-full flex flex-col items-center shadow-lg  rounded-3xl"
     >
       <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 md:mb-20 ">
         Gallery

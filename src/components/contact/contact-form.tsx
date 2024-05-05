@@ -4,6 +4,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
+import { motion } from "framer-motion";
+
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -16,6 +18,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
+import { useIsInView } from "@/lib/hooks";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, {
@@ -34,6 +37,8 @@ const contactFormSchema = z.object({
 });
 
 const ContactForm = () => {
+  const { ref, isInView } = useIsInView();
+
   const form = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -51,7 +56,14 @@ const ContactForm = () => {
   }
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 ">
+      <motion.form
+        ref={ref}
+        initial={{ opacity: 0, x: 50 }}
+        animate={isInView && { opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="space-y-6 "
+      >
         <div className="grid grid-cols-2 gap-6 ">
           <FormField
             control={form.control}
@@ -123,7 +135,7 @@ const ContactForm = () => {
         <Button className="w-full rounded-full p-6 text-xl " type="submit">
           Submit
         </Button>
-      </form>
+      </motion.form>
     </Form>
   );
 };
